@@ -1,0 +1,48 @@
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
+;; and `package-pinned-packages`. Most users will not need or want to do this.
+;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+(require 'iso-transl)
+
+;; ======== Interface ======== ;;
+(load "~/.emacs.d/config/interface")
+;;======== Interface ======== ;;
+
+;; ======== Package list ======== ;;
+(load "~/.emacs.d/config/packages")
+;;  ======== Package list ======== ;;
+
+;; ======== Keymaps ======== ;;
+(load "~/.emacs.d/config/keymap")
+;; ======== Keymaps ======== ;;
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
+ '(custom-enabled-themes (quote (tokyo-night)))
+ '(custom-safe-themes
+   (quote
+    ("dff5fcb4026f659905c69ab18cccaedaa33aef2be0dcdf8c47e32967e49feab2" "e428aaf091ceceb67d51df7fa19ad51f407a70b7dcf77d204ab5279d6cb884c2" "64672caccb2056b77222043fbb5a7e940345b325c6eb2f25eb606846b767c805" "e1a0939d6ce34e86c0ce21b4184fe4cab9b4f11e5a77892fc7aeca6bd1448857" "19f9747b06e43c058df8ec66f84ef3d2253baeefdc25bbb051dfb47282ce45fa" "9addd7231074444cfeb74c694b9416f02156d70d6b8c35fb3352b12bcc71f93a" "632e3a92433ac5ab768938f6fde05c00a047b552ccdbc36c9b760c1780b3964e" "3e404c9b1071a5c2c0adea0103cb5eb592495484c1f7ba3cf6aab559095f69fb" "306565d800a5f80bdf373d99a9b4af86ea2e66cbde24b7dad4e6547bb09035a1" "6670bdecd8a75b7182ae556a049717391f030679f055460e02968257bf27fdf5" "be6849e51d90af9dcad88421386fc188471c6e5dbe9302153e1ff173624f6ca4" "8fb398ffd0e3c6a9fd117bc2e7b6a47fb567cf51df74156c9d312b25e77caa8c" "bfb0e18d86d98bc0615351b35ee263e186ba686ab005465672e808e6023a5ba7" "32ba8ecf849f396c1bb220a469091da876f75c4bb3eb6dd7d23b3af20b79d960" "63035b5bf33235339a94f13cd26c1014852eacdeb3aab38729e4531a85bd090d" "50c2447287ffc7687ee74de4ed4d7fdc5bcedf456f62b07585529b2dd48074ae" "cbace7c1b25ba7ae98be24440c748f53ebfafb39b5bc733a2ba8bb84d29691d9" "d906458b38d77d7f098a08d2d1d48f1ecaa62a03710ca395b539abc5c6ad5b84" "4dbc15bffb38c7484b4425256f20f85d7113142cc968b1401ab5ab5166307dd1" "54aa16aace1f32cf86ba3e9237d8399c93eb5bcbe56994f960155256602a75f9" "fb3459264ad16f81b94f414cc64d2685342074035b24ec63c584f1383f96a634" "7dccb89109362bf4b4367063300b6d5623f8ea618d3e5be87a1b85e0f6cc3ede" "54619919f3a1a9ef83921e733b5ec7b65f95f8ba71ed36b64d7dba5715ba913c" "e9890db48e848b015b3dc415964849a1f018a43f699df7a9eb2380413ec798cb" "f44cf995ce142649eca64675bed6f0d5b609ce70af53491130e0e7046224bb6e" "a41ecbed9d0dacc81f24671372f6711e2d229f64afbe76c5062ffb008a91bdaf" "bd6e0e01a9b6e5afdced438ff8b86e590ab3cdcbb3c4dc5af0d1e3cabe486761" "31a1110bf0758197ae27dc976645fb345538f8c974a2bec19e839bd35886725f" "c0126a7377416ff292cf298a95ae1989379892b5a631ee48c9afbbff75dce494" "1effbc027c168d014d612bb4c4c1109107ebd5a5425806e7260fa3b51b6efe41" "be31445e65541ac4b11cafd517253feb846c3fb7027f9adf33f7149d9ecd211e" default)))
+ '(package-selected-packages
+   (quote
+    (auto-complete magit treemacs-projectile treemacs all-the-icons use-package minimap))))

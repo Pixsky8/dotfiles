@@ -1,0 +1,5 @@
+alias l='ls -CF'
+alias ll='ls -l'
+alias la='ls -A'
+alias pingg='ping google.com'
+alias arch='startarch -u toitoine'

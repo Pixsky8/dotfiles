@@ -1,0 +1,25 @@
+(eval-when-compile
+  ;; Following line is not needed if use-package.el is in ~/.emacs.d
+  (add-to-list 'load-path "use-package/use-package.el")
+  (require 'use-package))
+
+;; ==== dired-sidebar ==== ;;
+;;(use-package dired-sidebar
+;;  :ensure t
+;;  :commands (dired-sidebar-toggle-sidebar))
+
+;;(add-to-list 'load-path "path from pwd")
+;;(require 'dired-sidebar)
+;; ==== ! dired-sidebar ==== ;;
+
+
+;; ==== projetile ==== ;;
+
+(projectile-mode +1)
+
+;; ==== ! projectile ==== ;;
+
+
+;; ==== auto-complete ==== ;;
+(global-auto-complete-mode t)
+;; ==== ! auto-complete ==== ;;

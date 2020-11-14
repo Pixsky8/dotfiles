@@ -1,0 +1,25 @@
+# functions
+
+emacs() {
+    if [ "$1" = "-w" ]; then
+        shift 1
+        command emacs $@
+    else
+        command emacs -nw $@
+    fi
+}
+
+pingg() {
+    ping google.com || pingg
+}
+
+# evals
+eval "$(thefuck --alias)"
+
+# alias
+alias kb="setxkbmap fr -variant mac"
+alias la="ls -a"
+alias gdbg="gdb -tui"
+alias cformat="clang-format-11 -i"
+
+#export EDITOR="emacs -nw"
