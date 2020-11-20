@@ -3,4 +3,6 @@
 ### treemacs
  -  treemacs-projectile
  -  all-the-icons
- ### auto-complete
+### auto-complete
+### magit
+ -  forge
