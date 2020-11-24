@@ -7,3 +7,6 @@
 
 ;; ==== Treemacs ==== ;;
 (global-set-key (kbd "C-c t") 'treemacs)
+
+;; ==== yafolding ==== ;;
+(define-key yafolding-mode-map (kbd "<C-return>") 'yafolding-toggle-element)

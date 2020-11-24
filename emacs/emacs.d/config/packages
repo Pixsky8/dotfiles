@@ -23,3 +23,10 @@
 ;; ==== auto-complete ==== ;;
 (global-auto-complete-mode t)
 ;; ==== ! auto-complete ==== ;;
+
+
+;; ==== yafolding ==== ;;
+(require 'yafolding)
+(add-hook 'prog-mode-hook
+          (lambda () (yafolding-mode)))
+;; ==== ! yafolding ==== ;;
