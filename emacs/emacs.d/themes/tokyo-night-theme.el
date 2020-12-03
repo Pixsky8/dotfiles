@@ -64,6 +64,8 @@
         `(font-lock-variable-name-face ((,class (:foreground ,var))))
         `(font-lock-warning-face ((,class (:foreground ,warning :background ,bg2))))
 
+        `(menubar ((t (:foreground ,fg1 :background ,bg1))))
+
         `(term-color-black ((,class (:foreground ,fg2 :background nil))))
         `(region ((,class (:background ,fg1 :foreground ,bg1))))
         `(highlight ((,class (:foreground ,fg3 :background ,bg3))))
@@ -265,7 +267,16 @@
         `(jde-java-font-lock-constant-face ((t (:foreground ,const))))
         `(jde-java-font-lock-modifier-face ((t (:foreground ,fg2))))
         `(jde-jave-font-lock-protected-face ((t (:foreground ,keyword))))
-        `(jde-java-font-lock-number-face ((t (:foreground ,var))))))
+        `(jde-java-font-lock-number-face ((t (:foreground ,var))))
+
+        `(centaur-tabs-default ((t (:background ,"#161616"))))
+        `(centaur-tabs-selected ((t (:background ,"#161616" :foreground ,fg1 :box nil))))
+        `(centaur-tabs-unselected ((t (:background ,"#161616" :foreground ,comment :box nil))))
+        `(centaur-tabs-selected-modified ((t (:background ,"#161616" :foreground ,fg1 :box nil))))
+        `(centaur-tabs-unselected-modified ((t (:background ,"#161616" :foreground ,comment :box nil))))
+        `(centaur-tabs-active-bar-face ((t (:background ,keyword :box nil))))
+        `(centaur-tabs-modified-marker-selected    ((t (:inherit 'centaur-tabs-selected-modified :box nil))))
+        `(centaur-tabs-modified-marker-unselected  ((t (:inherit 'centaur-tabs-unselected-modified :box nil))))))
 
 ;;;###autoload
 (when load-file-name

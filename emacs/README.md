@@ -8,3 +8,4 @@
 ### magit
  -  forge
 ### yafolding
+### centaur-tabs

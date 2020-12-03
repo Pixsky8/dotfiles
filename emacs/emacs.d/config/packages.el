@@ -30,3 +30,22 @@
 (add-hook 'prog-mode-hook
           (lambda () (yafolding-mode)))
 ;; ==== ! yafolding ==== ;;
+
+;; ==== centaur-tabs ==== ;;
+(use-package centaur-tabs
+  :demand
+  :config
+  (setq centaur-tabs-style "bar"
+        centaur-tabs-height 32
+        centaur-tabs-set-icons t
+        centaur-tabs-show-navigation-buttons t
+        centaur-tabs-set-modified-marker t
+        centaur-tabs-set-bar 'under
+        x-underline-at-descent-line t)
+  (centaur-tabs-headline-match)
+  (centaur-tabs-mode t)
+  :bind
+  ("C-c C-<left>" . centaur-tabs-backward)
+  ("C-c C-<right>" . centaur-tabs-forward)
+)
+;; ==== ! centaur-tabs ==== ;;
