@@ -1,5 +1,13 @@
 # Package list
+
 ### use-package
+
+## Major modes
+
+ -  yaml-mode
+
+## Graphical Improvement
+
 ### projectile
 ### treemacs
  -  treemacs-projectile
