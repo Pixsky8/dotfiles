@@ -6,14 +6,20 @@
 
  * yaml-mode
 
-## Graphical Improvement
+## Editing
 
+* auto-complete
+
+## Project Management
+
+* magit
+    -  forge
 * projectile
 * treemacs
     -  treemacs-projectile
     -  all-the-icons
-* auto-complete
-* magit
-    -  forge
-* yafolding
+
+## Graphical Improvement
+
 * centaur-tabs
+* yafolding
