@@ -1,12 +1,12 @@
 # Package list
 
 * use-package
+* docker
 
 ## Major modes
 
 * yaml-mode
-* docker
-    - dockerfile-mode
+* dockerfile-mode
 
 ## Editing
 
