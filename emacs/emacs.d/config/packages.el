@@ -14,11 +14,14 @@
 
 
 ;; ==== projetile ==== ;;
-
 (projectile-mode +1)
-
 ;; ==== ! projectile ==== ;;
 
+;; ==== magit ==== ;;
+(setq auth-sources '("~/.emacs.d/config/.authinfo.gpg"))
+(with-eval-after-load 'magit
+  (require 'forge))
+;; ==== ! magit ==== ;;
 
 ;; ==== auto-complete ==== ;;
 (global-auto-complete-mode t)
