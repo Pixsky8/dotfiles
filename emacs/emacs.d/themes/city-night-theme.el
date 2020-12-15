@@ -45,7 +45,7 @@
       (red "#ee3b3b")
       (lime "DarkOliveGreen3")
 
-      (selection (if (display-graphic-p) "#4a4e6e" "#d3d3e2"))
+      (selection (if (display-graphic-p) "#3a3e56" "#d3d3e2"))
       (accent  "#7aa2f7")
       (builtin "#00c89c")
       (keyword "#719fe9")
@@ -298,4 +298,4 @@
 ;; no-byte-compile: t
 ;; End:
 
-;;; tokyo-night-theme.el ends here
+;;; city-night-theme.el ends here
