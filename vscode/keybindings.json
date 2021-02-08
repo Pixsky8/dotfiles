@@ -1,0 +1,192 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+shift+alt+t",
+        "command": "workbench.action.tasks.terminate"
+    },
+    {
+        "key": "ctrl+shift+alt+r",
+        "command": "workbench.action.debug.terminateThread"
+    },
+    // Toggle between terminal and editor focus
+    {
+        "key": "ctrl+k o",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+k o",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "workbench.action.terminal.focus"},
+    {
+        "key": "ctrl+g",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    // End Toggle between terminal and editor focus
+    {
+        "key": "ctrl+k ctrl+g",
+        "command": "workbench.action.toggleMaximizedPanel"
+    },
+    {
+        "key": "ctrl+k o",
+        "command": "-workbench.action.files.showOpenedFileInNewWindow"
+    },
+    {
+        "key": "ctrl+k o",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+k o",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+k f5",
+        "command": "workbench.action.openWorkspaceConfigFile"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "-workbench.action.quit"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "-workbench.action.files.openLocalFile",
+        "when": "remoteFileDialogVisible"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "editor.action.insertLineBefore",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+[IntlBackslash]",
+        "command": "-editor.action.inPlaceReplace.up",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+[IntlBackslash]",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+y",
+        "command": "-emacs.C-y",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+y",
+        "command": "editor.action.clipboardPasteAction"
+    },
+    {
+        "key": "ctrl+shift+y",
+        "command": "emacs.C-y"
+    },
+    {
+        "key": "ctrl+shift+y",
+        "command": "-workbench.debug.action.toggleRepl",
+        "when": "debuggersAvailable"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-emacs.C-w",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "editor.action.clipboardCutAction"
+    },
+    {
+        "key": "alt+w",
+        "command": "editor.action.clipboardCopyAction"
+    },
+    {
+        "key": "shift+alt+w",
+        "command": "emacs.M-w",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+w",
+        "command": "-emacs.M-w",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+c g",
+        "command": "magit.status",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "alt+x g",
+        "command": "-magit.status"
+    },
+    {
+        "key": "ctrl+x ctrl+f",
+        "command": "-workbench.action.files.openFolder"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "-workbench.action.files.openFile"
+    },
+    {
+        "key": "ctrl+x b",
+        "command": "workbench.action.quickOpen",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+x b",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+c t",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "alt+y",
+        "command": "redo"
+    },
+    {
+        "key": "ctrl+x ctrl+f",
+        "command": "workbench.action.files.openFile",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "undo",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+alt+[Quote]",
+        "command": "editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "alt+g alt+g",
+        "command": "workbench.action.gotoLine"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-workbench.action.gotoLine"
+    },
+    {
+        "key": "ctrl+space",
+        "command": "emacs.exitMarkMode",
+        "when": "editorHasSelection && editorTextFocus"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-emacs.exitMarkMode",
+        "when": "editorHasSelection && editorTextFocus"
+    }
+]
