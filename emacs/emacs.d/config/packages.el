@@ -12,6 +12,9 @@
 ;;(require 'dired-sidebar)
 ;; ==== ! dired-sidebar ==== ;;
 
+;; ==== treemacs ==== ;;
+(setq treemacs-width 25)
+;; ==== ! treemacs ==== ;;
 
 ;; ==== projetile ==== ;;
 (projectile-mode +1)
@@ -24,9 +27,8 @@
 ;; ==== ! magit ==== ;;
 
 ;; ==== auto-complete ==== ;;
-(global-auto-complete-mode t)
+;;(global-auto-complete-mode t)
 ;; ==== ! auto-complete ==== ;;
-
 
 ;; ==== yafolding ==== ;;
 (require 'yafolding)
@@ -52,3 +54,23 @@
   ("C-c C-<right>" . centaur-tabs-forward)
 )
 ;; ==== ! centaur-tabs ==== ;;
+
+;; ==== fill-column-indicator ==== ;;
+(require 'fill-column-indicator)
+(setq fci-rule-width 1)
+(setq fci-rule-color "#7aa2f7")
+(setq-default fci-rule-column 80)
+(setq fci-handle-truncate-lines nil)
+(define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
+(defun auto-fci-mode (&optional unused)
+  (if (and
+       (> (window-width) fci-rule-column)
+       (or
+           (eq major-mode 'c-mode)
+           (eq major-mode 'c++-mode)
+           (eq major-mode 'rust-mode)))
+    (fci-mode 1)
+    (fci-mode 0)))
+(add-hook 'after-change-major-mode-hook 'auto-fci-mode)
+(add-hook 'window-configuration-change-hook 'auto-fci-mode)
+;; ==== ! fill-column-indicator ==== ;;

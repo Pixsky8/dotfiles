@@ -10,3 +10,7 @@
 
 ;; ==== yafolding ==== ;;
 (define-key yafolding-mode-map (kbd "<C-return>") 'yafolding-toggle-element)
+
+;; ==== LSP Mode ==== ;;
+(define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
+(setq lsp-keymap-prefix "C-c l")

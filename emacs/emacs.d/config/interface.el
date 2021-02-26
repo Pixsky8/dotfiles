@@ -1,3 +1,6 @@
+(setq auto-save-default nil)
+(setq create-lockfiles nil)
+
 ;; Basic interface configuration
 (global-linum-mode) ; show line numbers
 (setq-default indent-tabs-mode nil)
@@ -7,12 +10,12 @@
 
 ;; Basic C configuration
 (setq c-basic-offset 4 ; spaces of indentation
-      c-default-style "bsd" ; sort of fits the coding style
-      fill-column 80) ; 80 columns rule
+      c-default-style "bsd") ; sort of fits the coding style
+;;      fill-column 80) ; 80 columns rule
 
 (setq whitespace-style '(face ; show ...
                          tabs tab-mark ; the tabulations,
-                         lines-tail ; lines too long (> fill-column characters),
+;;                         lines-tail ; lines too long (> fill-column characters),
                          trailing)) ; and trailing spaces
 (global-whitespace-mode)
 
