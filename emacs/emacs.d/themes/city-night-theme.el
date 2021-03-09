@@ -1,4 +1,4 @@
-;;; tokyo-night-theme.el --- Theme
+;;; city-night-theme.el --- Theme
 
 ;; Copyright (C) 2020 , scoobert
 
@@ -30,17 +30,17 @@
 (deftheme city-night
   "An emacs dark theme based on tokyo-night")
 (let ((class '((class color) (min-colors 89)))
-      (fg1 (if (display-graphic-p) "#c4d3e2" "#d3d3e2"))
+      (fg1 (if (display-graphic-p) "#c4c3e2" "#d3d3e2"))
       (fg2 (if (display-graphic-p) "black" "color-232"))
-      (fg3 (if (display-graphic-p) "dim grey" "color-240"))
+      (fg3 (if (display-graphic-p) "#605a6d" "color-240"))
       (fg4 "#a3b0bc")
-      (bg1 (if (display-graphic-p) "#25252a" "color-235"))
-      (bg2 "#202024")
+      (bg1 (if (display-graphic-p) "#202430" "undefined"))
+      (bg2 "#1a1d2d")
       (bg3 "#c4d3e2")
-      (bg4 "#3d3d3d")
+      (bg4 "#3d59a1")
 
       (blue_dark "DodgerBlue1")
-      (blue_bg "#1f2335")
+      (blue_bg "#252747")
       (orange_dark "sienna1")
       (red "#ee3b3b")
       (lime "DarkOliveGreen3")
@@ -51,12 +51,13 @@
       (keyword "#719fe9")
       (const   "#5a78fe")
       (comment "#a0a0b2")
-      (func    "#00b892")
-      (str     "#88c955")
-      (type    "#b59ae2")
-      (var     "#e2a745")
-      (warning "#dd8000")
-      (warning2 "#dd0000"))
+      (func    "#e2a745")
+      (str     "#00b892")
+      (type    "#9c6abb")
+      (var     "#faafff")
+      (warning "DeepPink1")
+      (warning2 "DarkOrange1"))
+
   (custom-theme-set-faces
    'city-night
    `(default ((,class (:background ,bg1 :foreground ,fg1))))
@@ -75,6 +76,8 @@
 
    `(menubar ((t (:foreground ,fg1 :background ,bg1))))
 
+   `(header-line((t (:foreground ,fg1 :background ,blue_bg :box (:line-width 2 :color ,bg2)))))
+
    `(term-color-black ((,class (:foreground ,fg2 :background nil))))
    `(region ((,class (:foreground ,(if (display-graphic-p) nil bg1) :background ,selection))))
    `(highlight ((,class (:foreground ,fg3 :background ,bg3))))
@@ -84,9 +87,11 @@
    `(show-paren-match-face ((,class (:background ,warning))))
    `(isearch ((,class (:bold t :foreground ,warning :background ,bg3))))
 
+   `(whitespace-trailing ((, class (:background ,warning2))))
+
    `(mode-line ((,class (:box (:line-width 1 :color nil) :bold t :foreground ,(if (display-graphic-p) accent fg4) :background ,bg2))))
    `(mode-line-inactive ((,class (:box (:line-width 1 :color ,bg2 :style pressed-button) :foreground ,(if (display-graphic-p) "grey" accent) :background ,bg2 :weight normal))))
-   `(mode-line-buffer-id ((,class (:bold t :foreground ,func :background nil))))
+   `(mode-line-buffer-id ((,class (:bold t :foreground ,builtin :background nil))))
    `(mode-line-highlight ((,class (:foreground ,keyword :box nil :weight bold))))
    `(mode-line-emphasis ((,class (:foreground ,fg1))))
 
@@ -111,7 +116,7 @@
    `(org-todo ((,class (:box (:line-width 1 :color ,fg3) :foreground ,red :bold t))))
    `(org-done ((,class (:box (:line-width 1 :color ,bg3) :bold t :foreground ,keyword))))
    `(org-warning ((,class (:underline t :foreground ,warning))))
-   `(org-agenda-structure ((,class (:weight bold :foreground ,fg3 :box (:color ,"dim grey") :background ,bg3))))
+   `(org-agenda-structure ((,class (:weight bold :foreground ,fg3 :box (:color ,fg3) :background ,bg3))))
    `(org-agenda-date ((,class (:foreground ,var :height 1.1 ))))
    `(org-agenda-date-weekend ((,class (:weight normal :foreground ,fg4))))
    `(org-agenda-date-today ((,class (:weight bold :foreground ,keyword :height 1.4))))
