@@ -54,7 +54,7 @@
       (func    "#e2a745")
       (str     "#00b892")
       (type    "#9c6abb")
-      (var     "#faafff")
+      (var     "LightCoral")
       (warning "DeepPink1")
       (warning2 "DarkOrange1"))
 
