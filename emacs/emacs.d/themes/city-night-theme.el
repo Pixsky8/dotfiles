@@ -44,8 +44,10 @@
       (orange_dark "sienna1")
       (red "#ee3b3b")
       (lime "DarkOliveGreen3")
+      (ok_green (if (display-graphic-p) "#50fa7b" "green"))
+      (err_red (if (display-graphic-p) "#ff5555" "red"))
 
-      (selection (if (display-graphic-p) "#3a3e56" "#d3d3e2"))
+      (selection (if (display-graphic-p) "#3a3e56" "color-235"))
       (accent  "#7aa2f7")
       (builtin "#00c89c")
       (keyword "#719fe9")
@@ -53,7 +55,7 @@
       (comment "#a0a0b2")
       (func    "#e2a745")
       (str     "#00b892")
-      (type    "#9c6abb")
+      (type    "#9c6abb") ;; #b59ae2
       (var     "LightCoral")
       (warning "DeepPink1")
       (warning2 "DarkOrange1"))
@@ -79,11 +81,12 @@
    `(header-line((t (:foreground ,fg1 :background ,blue_bg :box (:line-width 2 :color ,bg2)))))
 
    `(term-color-black ((,class (:foreground ,fg2 :background nil))))
-   `(region ((,class (:foreground ,(if (display-graphic-p) nil bg1) :background ,selection))))
+   `(region ((,class :background ,selection)))
    `(highlight ((,class (:foreground ,fg3 :background ,bg3))))
    `(hl-line ((,class (:background  ,bg2))))
    `(fringe ((,class (:background ,bg2 :foreground ,fg4))))
    `(cursor ((,class (:background ,bg3))))
+   `(whitespace-tab ((,class (:background, (if (display-graphic-p) "beige" selection)))))
    `(show-paren-match-face ((,class (:background ,warning))))
    `(isearch ((,class (:bold t :foreground ,warning :background ,bg3))))
 
@@ -126,6 +129,9 @@
    `(org-ellipsis ((,class (:foreground ,builtin))))
    `(org-verbatim ((,class (:foreground ,fg4))))
    `(org-document-info-keyword ((,class (:foreground ,func))))
+
+   `(ediff-even-diff-A ((,class (:foreground, "black" :background, ok_green))))
+   `(ediff-current-diff-A ((,class (:foreground, "black" :background, err_red))))
 
    `(font-latex-bold-face ((,class (:foreground ,type))))
    `(font-latex-italic-face ((,class (:foreground ,var :italic t))))
@@ -282,6 +288,8 @@
    `(jde-java-font-lock-modifier-face ((t (:foreground ,fg2))))
    `(jde-jave-font-lock-protected-face ((t (:foreground ,keyword))))
    `(jde-java-font-lock-number-face ((t (:foreground ,var))))
+
+   `(lsp-ui-doc-background ((,class (:background ,selection))))
 
    `(centaur-tabs-default ((t (:background ,bg2))))
    `(centaur-tabs-selected ((t (:background ,bg2 :foreground ,fg1 :box nil))))
