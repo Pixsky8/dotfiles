@@ -14,3 +14,6 @@
 ;; ==== LSP Mode ==== ;;
 (define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
 (setq lsp-keymap-prefix "C-c l")
+
+;; ==== Magit ==== ;;
+(global-set-key (kbd "C-c g") 'magit)
