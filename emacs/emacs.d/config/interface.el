@@ -2,16 +2,36 @@
 (setq create-lockfiles nil)
 
 ;; Basic interface configuration
-(global-linum-mode) ; show line numbers
+(setq frame-resize-pixelwise t) ; allow true full screen
+(setq global-display-line-number-mode 1) ; show line numbers
+(setq column-number-mode t)
+
 (setq-default indent-tabs-mode nil)
 (setq indent-tabs-mode nil)
 (tool-bar-mode -1) ; hide tool bar (GUI only)
 (scroll-bar-mode -1) ; hide scroll bar
 
+;; File extension config
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
+
 ;; Basic C configuration
 (setq c-basic-offset 4 ; spaces of indentation
       c-default-style "bsd") ; sort of fits the coding style
 ;;      fill-column 80) ; 80 columns rule
+
+;; Basic Go configuration
+(add-hook 'go-mode-hook
+          (lambda ()
+            (setq indent-tabs-mode nil)
+            (setq tab-width 4)))
+
+;; Basic Python configuration
+(add-hook 'python-mode-hook
+     (lambda ()
+        (setq-default indent-tabs-mode t)
+        (setq-default tab-width 4)
+        (setq-default py-indent-tabs-mode t)
+        (add-to-list 'write-file-functions 'delete-trailing-whitespace)))
 
 (setq whitespace-style '(face ; show ...
                          tabs tab-mark ; the tabulations,
