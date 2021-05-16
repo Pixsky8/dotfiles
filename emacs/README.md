@@ -20,8 +20,12 @@
 * treemacs
     -  treemacs-projectile
     -  all-the-icons
+* lsp-mode
+    - lsp-java
+    - dap-mode
 
 ## Graphical Improvement
 
 * centaur-tabs
 * yafolding
+* fill-column-indicator
