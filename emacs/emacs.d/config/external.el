@@ -1,0 +1,5 @@
+(add-to-list 'load-path "~/.emacs.d/external/")
+(load "tiger.el")
+(require 'tiger)
+(autoload 'tiger-mode "tiger" "Load tiger-mode" t)
+(add-to-list 'auto-mode-alist '("\\.ti[gh]$" . tiger-mode))

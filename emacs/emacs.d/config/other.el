@@ -1,0 +1,1 @@
+(setq version-control 'never)

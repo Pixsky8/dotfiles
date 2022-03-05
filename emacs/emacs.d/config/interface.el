@@ -8,8 +8,9 @@
 
 (setq-default indent-tabs-mode nil)
 (setq indent-tabs-mode nil)
+(setq-default tab-width 4)
 (tool-bar-mode -1) ; hide tool bar (GUI only)
-(scroll-bar-mode -1) ; hide scroll bar
+(if (display-graphic-p) (scroll-bar-mode -1)) ; hide scroll bar
 
 ;; File extension config
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
@@ -34,7 +35,7 @@
         (add-to-list 'write-file-functions 'delete-trailing-whitespace)))
 
 (setq whitespace-style '(face ; show ...
-                         tabs tab-mark ; the tabulations,
+                         tab-mark ; the tabulations,
 ;;                         lines-tail ; lines too long (> fill-column characters),
                          trailing)) ; and trailing spaces
 (global-whitespace-mode)
@@ -74,3 +75,17 @@
 ;;(setq visible-bell t)
 ;;(setq bell-volume 0)
 (setq ring-bell-function 'ignore)
+
+;; smoother scrolling
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+(setq scroll-step 1) ;; keyboard scroll one line at a time
+
+;; TRAMP config
+(setq tramp-inline-compress-start-size 1000)
+(setq tramp-copy-size-limit 10000)
+(setq vc-handled-backends '(Git))
+(setq tramp-verbose 1)
+(setq tramp-default-method "scp")
+(setq tramp-use-ssh-controlmaster-options nil)

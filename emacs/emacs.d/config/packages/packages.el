@@ -3,6 +3,8 @@
   (add-to-list 'load-path "use-package/use-package.el")
   (require 'use-package))
 
+(load "~/.emacs.d/config/packages/lsp.el")
+
 ;; ==== dired-sidebar ==== ;;
 ;;(use-package dired-sidebar
 ;;  :ensure t
@@ -24,6 +26,12 @@
 (setq auth-sources '("~/.emacs.d/config/.authinfo.gpg"))
 (with-eval-after-load 'magit
   (require 'forge))
+(setq
+ forge-alist
+ '(("gitlab.cri.epita.fr" "gitlab.cri.epita.fr/api/v4" "gitlab.cri.epita.fr" forge-gitlab-repository)
+   ("github.com" "api.github.com" "github.com" forge-github-repository)
+   ("gitlab.com" "gitlab.com/api/v4" "gitlab.com" forge-gitlab-repository))
+ )
 ;; ==== ! magit ==== ;;
 
 ;; ==== auto-complete ==== ;;
@@ -74,3 +82,13 @@
 (add-hook 'after-change-major-mode-hook 'auto-fci-mode)
 (add-hook 'window-configuration-change-hook 'auto-fci-mode)
 ;; ==== ! fill-column-indicator ==== ;;
+
+;; ==== evil-mode ==== ;;
+(load "~/.emacs.d/config/packages/evil.el")
+;; ==== ! evil-mode ==== ;;
+
+;; === doom modeline ==== ;;
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1))
+;; ==== ! doom modeline ==== ;;

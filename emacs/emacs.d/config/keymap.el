@@ -2,6 +2,20 @@
 (global-set-key (kbd "<f5>") 'compile)
 (global-set-key (kbd "<f6>") 'eshell)
 
+;; Enable mouse support
+(unless window-system
+  (require 'mouse)
+  (xterm-mouse-mode t)
+  (global-set-key [mouse-4] (lambda ()
+                              (interactive)
+                              (scroll-down 1)))
+  (global-set-key [mouse-5] (lambda ()
+                              (interactive)
+                              (scroll-up 1)))
+  (defun track-mouse (e))
+  (setq mouse-sel-mode t)
+)
+
 ;; ==== Projectile  ==== ;;
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
@@ -17,3 +31,14 @@
 
 ;; ==== Magit ==== ;;
 (global-set-key (kbd "C-c g") 'magit)
+
+;; ==== Term ==== ;;
+(defun term-mode-config (&rest ignored)
+  (term-line-mode))
+(advice-add 'ansi-term :after #'term-mode-config)
+(advice-add 'term :after #'term-mode-config)
+
+;; ==== Tabs ==== ;;
+(defun insert-tab-space ()
+  (interactive)
+  (insert "    "))
